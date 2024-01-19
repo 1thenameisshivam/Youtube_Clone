@@ -21,7 +21,10 @@ const VedioContent = () => {
 
   if(vedios===null) return
   return (
-    <div className='w-screen bg-black text-white' >
+   
+    
+    <div 
+    className='w-screen bg-black text-white' >
     <ButtonList/>
     <div className='w-auto flex flex-wrap gap-4 p-6'> { vedios.map(vedio=><Link to={"/app/watch/"+vedio.id}><VedioCard info={vedio} /></Link>)}</div>
   

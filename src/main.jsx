@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import appStore from './utils/AppStore.js';
 import Watch from './component/Watch.jsx';
 import Browse from './component/Browse.jsx';
+import Seach from './component/Seach.jsx';
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
      {
       path:"/app/watch/:watchid",
       element:<Watch/>
+    },
+    {
+      path:"/app/search",
+      element:<Seach/>
     }
     ]
   },
