@@ -9,7 +9,7 @@ const vediosSlice = createSlice({
     },
     reducers:{
         addLoadVedios:(state,action)=>{
-            state.loadVedios=[...state.loadVedios , ...action.payload]
+            state.loadVedios=[...action.payload]
         },
         addSearchName:(state,action)=>{
             state.searchName=action.payload;
