@@ -12,7 +12,7 @@ const Seach = () => {
   const seacrvedio=async(id)=>{
     const data=await fetch(SEARCH_BY_ID+id)
     const json =await data.json();
-    setResult((e)=>[...e,...json.items])
+    setResult((e)=>[...json.items,...e])
   }
   console.log(result)
   useEffect(()=>{
@@ -23,10 +23,11 @@ const Seach = () => {
     const json=await dataa.json();
     // console.log(json.items)
     setData(json.items)
+    setResult([])
      data.map(vid=>seacrvedio(vid.id.videoId))
   }
   return (
-    <div>
+    <div className='bg-black w-full'>
         <h1 className='mt-12 p-4' >
         { result && result.map((vedio,index)=><Link key={index} to={"/app/watch/"+vedio.id} ><SearchVedio info={vedio} /></Link>)}
         </h1>

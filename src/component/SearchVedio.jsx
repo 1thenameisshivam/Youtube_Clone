@@ -6,7 +6,7 @@ const SearchVedio = ({info}) => {
 
   return (
 
-    <div className=' w-96 p-1 flex' >
+    <div className=' w-auto p-1 flex items-center gap-4 m-1 bg-slate-800 text-white rounded p-1' >
         <img className='w-96 rounded-lg' src={thumbnails.medium.url} />
         <div>
         <h1>{localized.title}</h1>
